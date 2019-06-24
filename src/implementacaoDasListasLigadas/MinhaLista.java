@@ -1,5 +1,5 @@
 
-package classe;
+package implementacaoDasListasLigadas;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -32,6 +32,7 @@ int tamanho;
        }
        return false;
     }
+    
     @Override
     public boolean add(T e) {
         No<T> novo = new No<T>(e);
@@ -81,6 +82,17 @@ int tamanho;
      }
      
      return false;
+    }
+    
+    @Override
+    public T get(int index) {
+       No<T> p = inicio;
+       int cont=0;
+       while(cont < index ){
+           p=p.getProx();
+           cont++;
+       }
+       return  p.getElemento();
     }
     
     public String toString()
@@ -140,10 +152,7 @@ int tamanho;
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public T get(int index) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     @Override
     public T set(int index, T element) {

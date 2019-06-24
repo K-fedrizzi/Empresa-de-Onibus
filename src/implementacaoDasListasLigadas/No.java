@@ -1,5 +1,5 @@
 
-package classe;
+package implementacaoDasListasLigadas;
 
 
 public class No<T> {
